@@ -1,0 +1,41 @@
+$color-principal: black;
+$color-secundaria: bisque;
+$color-bg: coral;
+
+@mixin globalspace(){
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    @include globalspace();
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    .left{
+        width: 50%;
+        background-color: $color-principal;
+        color: $color-secundaria;
+        .list{
+            font-size: 45px;
+            .itens{
+                list-style: none;
+            }
+        }
+    }
+    .rigth{
+        width: 50%;
+        background-color: $color-bg;
+        .text{
+            font-family: Arial, Helvetica, sans-serif;
+            color: azure;
+            font-size: 1em;
+            padding: 10px;
+            text-align: justify;
+        }
+    }
+}
+ 
